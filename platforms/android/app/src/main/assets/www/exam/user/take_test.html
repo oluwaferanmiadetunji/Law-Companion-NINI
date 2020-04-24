@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CBT App Admin">
+    <meta name="author" content="Adeyemo Adeolu">
+
+    <!-- Title -->
+    <title>Law Companion Nini</title>
+    <!-- Fonts -->
+
+
+    <!-- Favicon -->
+    <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+    <!-- Fonts -->
+
+    <!-- Icons -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+   <!--Bootstrap.min css-->
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!-- Dashboard CSS -->
+    <link href="../assets/css/dashboard.css" rel="stylesheet" type="text/css">
+
+    <!-- Tabs CSS -->
+    <link href="../assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom scroll bar css-->
+    <link href="../assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- Sidemenu Css -->
+    <link href="../assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="../../cordova.js"></script> 
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady(){
+            document.addEventListener("offline", onOffline, false);
+            function onOffline() {
+                alert('No internet connection!');
+               onDeviceReady()
+            }
+        }
+    </script>
+
+    <!-- Select2 css-->
+    <link rel="stylesheet" href="../assets/plugins/select2/select2.css">
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/axios.min.js"></script>
+  </head>
+
+  <body class="app sidebar-mini">
+    <div class="modal fade" id="submitModal" role="dialog">
+      <div class="modal-dialog">  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Message</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to submit this test? Process cannot be reversed. Click submit to continue or click no to cancel</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="confirmSubmit()" class="btn btn-primary" data-dismiss="modal" id="yes">Submit</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="no">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="cancelModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Cancel Warning</h4>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to cancel this test?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="location.href='dashboard.html'" class="btn btn-danger" data-dismiss="modal" id="yes">Yes</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="no">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="global-loader" ></div>
+    <div class="page">
+      <div class="page-main">
+        <div class=" ">
+          <div class="side-app">
+            <div class="main-content">
+              <!-- Top Navigation -->
+              <!-- Top navbar -->
+              <nav class="navbar navbar-top  navbar-expand-md navbar-dark" id="navbar-main">
+                <div class="container-fluid">
+                  <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
+                  <span class="d-none d-md-flex" id="name"></span>
+                  <!-- Brand -->
+                  <a class="navbar-brand pt-0 d-md-none" href="dashboard.html">
+                    <div class="signature-font">Funmi Quadri &amp; Co.</div>
+                    <sub style="font-size: 12px">Law Companion Nini</sub>
+                  </a>
+                  <!-- User -->
+                  <ul class="navbar-nav align-items-center ">
+                    <li class="nav-item dropdown">
+                      <a aria-expanded="false" aria-haspopup="true" class="nav-link pr-md-0 mr-md-2 pl-1" data-toggle="dropdown" href="#" role="button">
+                        <div class="media align-items-center">
+                          <span class="avatar avatar-sm rounded-circle"><img alt="Image placeholder" src="../assets/img/user.png"></span>
+                        </div>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                        <div class=" dropdown-header noti-title text-center pb-3">
+                          <h3 class="text-capitalize text-dark mb-1" id="name1"></h3>
+                          <h6 class="text-overflow m-0">User</h6>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- Top navbar-->             
+              <!-- Page content -->
+              <div class="container-fluid pt-8" id="loading">
+                <div class="d-flex align-items-center" style="margin: auto; height: 200px; width:200px;">
+                  <span>Setting exam...</span>
+                  <div class="spinner-border ml-2" role="status" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="container-fluid pt-8" id="exam" style="display: none;">
+                <div class="page-header mt-0  p-3">
+                  <span class="badge  badge-lg badge-pill badge-primary text-white"><i class="glyphicon glyphicon-bell"></i>   <span id="time">hh : mm : ss</span></span>
+                  <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><i class="fe fe-home">  Home</i></li>
+                    <li class="breadcrumb-item">Test Instruction</li>
+                    <li class="breadcrumb-item active" aria-current="page">Take Test</li>
+                  </ol>
+                </div>
+                <input type="hidden" id="exam_duration" value="">
+                <div class="row">
+                  <!-- BASIC WIZARD -->
+                  <div class="col-md-12">
+                    <button class="btn btn-primary btn-sm float-right" onclick="attemptCancel()">Cancel Test</button>
+                  </div>
+                  <div class="col-xl-12 margin-top" id="app" v-if="questions.length">
+                    <div class="card m-b-20">
+                      <div class="card-header">
+                        <h2 class="mb-0 float-left">Course Name: <span style="text-transform: initial;">{{course_name}}</span></h2>
+                        <h2 class="mb-0 float-right">Question: {{index + 1}} of <span>{{lastIndex}}</span></h2>
+                      </div>
+                      <div class="card-body ">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h3 class="mb-5">
+                              <strong>Question:  </strong>
+                              <span>{{ questions[index].question }}</span>
+                            </h3>
+                            
+                            <div class="custom-control custom-radio mb-3"
+                            @click.prevent="selectAnswer(index)"
+                            @click="submitAnswer"
+                              v-for="(answer, index) in answers">
+                              <input 
+                              type="radio" 
+                              id="customRadio1" 
+                              name="customRadio" 
+                              class="custom-control-input"
+                              :disabled="answered"
+                              :value="index">
+                              <label 
+                                :class="[answerClass(index), defaultClass]"
+                                for="customRadio1">{{ answer }}</label>
+                            </div>
+
+                          </div>
+                          <div class="col-md-12">
+                            <ul class="list-inline wizard mb-0">
+                              <li class="next list-inline-item float-right">
+                                <button
+                                  @click="next"
+                                  style="cursor: pointer;" 
+                                  class="btn btn-primary mb-0 waves-effect waves-light"
+                                  v-show="index !== (lastIndex-1)"
+                                >Next</button>
+                                <button
+                                  @click="finishExam"
+                                  style="cursor: pointer;" 
+                                  class="btn btn-primary mb-0 waves-effect waves-light"
+                                  v-show="index === (lastIndex-1)"
+                                  :disabled="loading"
+                                >{{ value }}</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- app-content-->
+    </div>
+  </div>
+  <style media="screen">
+    .btn {
+      margin: 0 10px;
+    }
+    .correct {
+      background-color: green;
+    }
+    .incorrect {
+      background-color: red;
+    }
+  </style>
+    <!-- Back to top -->
+  <!-- Back to top -->
+  <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <!-- Adon Scripts -->
+  <!-- Core -->
+  <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/popper.js"></script>
+  <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/plugins/chart-circle/circle-progress.min.js"></script>
+
+  <!-- Optional JS -->
+  <script src="../assets/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+  <!-- Fullside-menu Js-->
+  <script src="../assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+  <!-- Custom scroll bar Js-->
+  <script src="../assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- peitychart -->
+  <script src="../assets/plugins/peitychart/jquery.peity.min.js"></script>
+  <script src="../assets/plugins/peitychart/peitychart.init.js"></script>
+
+  <!-- Adon JS -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/dashboard-service.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      var course_name = localStorage.getItem("Course");
+      var count = localStorage.getItem("Count");
+      var duration = localStorage.getItem("Duration");
+      var year = localStorage.getItem("Year");
+      var durationInSeconds = duration * 60000;
+      var name = localStorage.getItem("Name");
+      document.getElementById('name').innerHTML = 'Hi, ' + name;
+      document.getElementById('name1').innerHTML = name;
+      document.getElementById('exam_duration').value = durationInSeconds;
+      
+      setTimeout(function(){ 
+        document.getElementById('loading').style.display = "none"
+        document.getElementById('exam').style.display = "block"
+
+          var x = setInterval(function() {
+          var distance = $("#exam_duration").val();
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          $("#time").text(hours + "h " + minutes + "m " + seconds + "s ");
+          var newValue = distance - 1000;
+          $("#exam_duration").val(newValue);
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            submitTest();
+          }
+        }, 
+        1000);
+
+
+      }, 8000);
+
+     
+    });
+  </script>
+  
+  <script>
+    function submit(){
+      setTimeout(function(){ 
+        document.getElementById('send').click();
+      }, 5000);
+    }
+  </script>
+
+  <!--Pure javascript functions-->
+  <script>
+    function attemptCancel() {
+      $("#cancelModal").modal('toggle');     
+    }
+    function submitTest() {
+      document.location.href = 'submit_test.html'
+    }
+    
+  </script>
+
+  <!-- Vue script-->
+  <script>
+    new Vue({
+      el: '#app',
+      data () {
+        return {
+          course_name: '',
+          count: '',
+          device_id: '',
+          year: '',
+          questions: [],
+          time: '',
+          index: 0,
+          selectedIndex: null,
+          correctIndex: 1,
+          shuffledAnswers: [],
+          numCorrect: 0,
+          numTotal: 0,
+          answered: false,
+          defaultClass: 'custom-control-label',
+          test: [],
+          value: 'Submit',
+          loading: false
+        }
+      }, 
+      computed: {
+        answers() {
+          let answers = new Array();
+          answers.push(this.questions[this.index].incorrect_answer1, this.questions[this.index].incorrect_answer2, this.questions[this.index].incorrect_answer3, this.questions[this.index].correct_answer)
+          return answers
+        },
+        singleTest() {
+          let singleTest = new Object();
+          singleTest["question"] = this.questions[this.index].question
+          singleTest["explanation"] = this.questions[this.index].explanation
+          singleTest["answers"] = this.shuffledAnswers
+          singleTest["correctIndex"] = this.correctIndex
+          singleTest["selectedIndex"] = this.selectedIndex
+          return singleTest
+        }
+      },
+      methods: {
+        getQuestions() {
+          this.course_name = localStorage.getItem("Course");
+          this.count = localStorage.getItem("Count");
+          this.year = localStorage.getItem("Year");
+          this.device_id = localStorage.getItem("Id");
+          this.lastIndex = localStorage.getItem("Count");
+          var x = new Date();
+          this.time = x.getFullYear() + '-' + (x.getMonth()+1) + '-' + x.getDate();
+          let url = "https://lawcompanioncbt.website/lccbt/public/api/questions/courses?course_name=" + this.course_name + "&count=" + this.count + "&year=" + this.year;
+          fetch(url, {
+            method: "POST",
+          })
+          .then((response) => {
+            return response.json()
+          })
+          .then((jsonData) => {
+            this.questions = jsonData.questions
+            this.shuffleAnswers()
+          })
+          .catch((error) => {
+            this.getQuestions();
+          });
+        },
+        setHistory() {
+          this.test.push(this.singleTest);
+        },
+        next() {
+          this.index++
+          this.selectedIndex = null
+          this.answered = false
+          localStorage.setItem("CorrectQuestion", this.numCorrect);
+          this.shuffleAnswers()
+        },
+        submitAnswer() {
+          let isCorrect = false
+          if(this.selectedIndex === this.correctIndex) {
+            isCorrect = true
+          }
+          this.answered = true    
+          this.increment(isCorrect)
+          localStorage.setItem("CorrectQuestion", this.numCorrect);
+           this.setHistory();
+        },
+        selectAnswer(index){
+          if (this.selectedIndex == 0 || this.selectedIndex == 1 || this.selectedIndex == 2 || this.selectedIndex == 3) {
+            return false
+          } else {
+          this.selectedIndex = index
+          }
+        },
+        increment(isCorrect) {
+          if(isCorrect) {
+            this.numCorrect++
+          }
+          this.numTotal++
+        },
+        shuffleAnswers(){
+          function shuffle(arra1) {
+            var ctr = arra1.length, temp, index;
+            while (ctr > 0) {
+              index = Math.floor(Math.random() * ctr);
+              ctr--;
+              temp = arra1[ctr];
+              arra1[ctr] = arra1[index];// // 
+              arra1[index] = temp;
+            }
+            return arra1;
+          }
+          this.shuffledAnswers = shuffle(this.answers);
+          this.correctIndex = this.shuffledAnswers.indexOf(this.questions[this.index].correct_answer)
+        },
+        answerClass(index) {
+          let answerClass = ''
+          if(!this.answered && this.selectedIndex === index) {
+            answerClass = 'selected custom-control-label'
+          } else if(this.answered && this.correctIndex === index) {
+            answerClass = 'correct custom-control-label'
+          }  else if(this.answered && this.selectedIndex === index && this.correctIndex !== index) {
+              answerClass = 'incorrect custom-control-label'
+          }
+          return answerClass
+        },
+        finishExam() {
+          localStorage.setItem("CorrectQuestion", this.numCorrect);
+          localStorage.setItem("Test", JSON.stringify(this.test))
+          let url = "https://lawcompanioncbt.website/lccbt/public/api/user/history/add?device_id=" + this.device_id + "&createdAt=" + this.time + "&numberCorrect=" + this.numCorrect + "&course_name=" + this.course_name + "&total=" + this.count;
+          axios.post(url).then(res => {
+            this.loading = true
+            this.value = 'Connecting...'
+            if(res.data.success) {
+              document.location.href = 'submit_test.html'
+            } else {
+              this.finishExam()
+            }
+            console.log(res.data.success)
+          }).catch(err => console.log(err))
+         
+        }
+      },
+      
+      mounted () {
+        this.getQuestions();
+      }
+    })
+  </script>
+
+  </body>
+
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>Law Companion Nini</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      // Cordova is loading.....
+
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+      // Now the Cordova is ready
+
+      function onDeviceReady() {
+        document.addEventListener("offline", onOffline, false);
+        function onOffline() {
+          alert("No internet connection!");
+          document.location.href = "index.html";
+        }
+
+        var element = document.getElementById("deviceProperties");
+
+        var device_id = device.uuid;
+        document.getElementById("device_id").value = device_id;
+        localStorage.setItem("DeviceId", device_id);
+
+        element.innerHTML =
+          "Device Name: " +
+          device.name +
+          "<br />" +
+          "<br/>" +
+          "Device Cordova: " +
+          device.cordova +
+          "<br />" +
+          "<br/>" +
+          "Device Platform: " +
+          device.platform +
+          "<br />" +
+          "<br/>" +
+          "Device UUID: " +
+          device.uuid +
+          "<br />" +
+          "<br/>" +
+          "Device with JS UUID: " +
+          device_id +
+          "<br />" +
+          "<br/>" +
+          "Device Version: " +
+          device.version +
+          "<br />" +
+          "<br/>";
+      }
+    </script>
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- fontawesome 5.0.4 js file -->
+    <script src="js/fontawesome-all.min.js"></script>
+
+    <!-- favicons
+     ================================================== -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/brand/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body id="top">
+    <section id="home">
+      <div class="overlay"></div>
+      <div class="home-content-table">
+        <div class="home-content-tablecell">
+          <div class="row">
+            <div class="col-twelve">
+              <h5 style="color: #fff; font-size: 9pt;">
+                Funmi Quadri &amp; Co.
+              </h5>
+              <p style="display: none;" id="deviceProperties">
+                Loading device properties...
+              </p>
+              <form class="more animate-intro login-form" method="POST">
+                <div class="more animate-intro">
+                  <input
+                    type="hidden"
+                    id="device_id"
+                    name="device_id"
+                    value=""
+                  />
+                  <div class="text-center connecting"></div>
+
+                  <input
+                    name="submit"
+                    id="login"
+                    class="button stroke form-control"
+                    type="submit"
+                    value="Login"
+                  />
+                </div>
+              </form>
+            </div>
+            <!-- end col-twelve -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end home-content-tablecell -->
+      </div>
+      <!-- end home-content-table -->
+
+      <ul class="home-social-list">
+        <li class="animate-intro">
+          <a href="tel:08131210744" target="_blank"
+            ><i class="fas fa-phone"></i
+          ></a>
+        </li>
+        <li class="animate-intro">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://funmiquadrionline.com&quote=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc"
+            target="_blank"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+        </li>
+        <li class="animate-intro">
+          <a
+            href="https://twitter.com/intent/tweet?via=LawCompanionNG&text=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc"
+            target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li class="animate-intro">
+          <a
+            href="https://api.whatsapp.com/send?text=Hi,%20I%20just%20downloaded%20law%20companion%%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc"
+            target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </li>
+      </ul>
+      <!-- end home-social-list -->
+
+      <div class="scrolldown">
+        <a href="#" class="scroll-icon smoothscroll">
+          <img src="images/logo.png" width="115rem" />
+        </a>
+      </div>
+    </section>
+    <!-- end home -->
+
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+
+    <!-- Java Script
+================================================== -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // fetch properties pop up ad
+        var url = "http://lawcompanion.website/public/api/ad";
+        var ad = "";
+
+        $.ajax({
+          url: url,
+          success: function (result) {
+            var tel = "tel:" + result.phone;
+            ad +=
+              '<div class = ""><a href = "properties.html"><img src = "http://lawcompanion.website/public/images/properties/' +
+              result.imagePath +
+              '" /></a><div><p class="folio-title">' +
+              result.location +
+              "<br />" +
+              result.price +
+              " &nbsp; <a href=" +
+              tel +
+              "><u>" +
+              result.phone +
+              '</u></a></p><p class="folio-title" class = "properties">' +
+              result.description +
+              "</p></div></div>";
+            $("#properties-ad").html(ad);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

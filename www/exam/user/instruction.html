@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="CBT App Admin">
+  <meta name="author" content="Adeyemo Adeolu">
+
+  <!-- Title -->
+  <title>Law Companion Nini</title>
+  <!-- Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+  <!-- Favicon -->
+  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+  <!-- Fonts -->
+
+  <!-- Icons -->
+  <link href="../assets/css/icons.css" rel="stylesheet">
+
+  <!--Bootstrap.min css-->
+  <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Dashboard CSS -->
+  <link href="../assets/css/dashboard.css" rel="stylesheet" type="text/css">
+
+  <!-- Tabs CSS -->
+  <link href="../assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom scroll bar css-->
+  <link href="../assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+  <!-- Sidemenu Css -->
+  <link href="../assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+
+
+  <!--Select2 css-->
+  <link rel="stylesheet" href="../assets/plugins/select2/select2.css">
+  <script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+  <script>
+   // loading cordova
+   document.addEventListener("deviceready", onDeviceReady, false);
+   function onDeviceReady(){
+       document.addEventListener("offline", onOffline, false);
+       function onOffline() {
+           alert('No internet connection!');
+           document.location.href = "instruction.html";
+       }
+   }
+</script>
+  
+  <script src="../../js/vue.js"></script>
+  <script src="../../js/axios.min.js"></script>
+
+  <style type="text/css">
+    td{
+        background: url(../assets/img/arrow_forward.png) no-repeat right center;
+      }
+    td a {
+      color: #fff
+      }
+  </style>
+</head>
+
+<body class="app sidebar-mini" style="overflow:auto">
+  <div id="global-loader" ></div>
+  <div class="page">
+    <div class="page-main">
+      <!-- Sidebar menu-->  
+      <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+      <aside class="app-sidebar " style="background-image: url(../assets/img/menu-bg.png);">
+        <div class="sidebar-img">
+          <a class="navbar-brand" href=""><span class="navbar-brand-img main-logo"><div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub></span><span class="navbar-brand-img logo"><sub><div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub></sub></span>
+          </a>
+          <ul class="side-menu ">
+            <li class="slide">
+              <a class="side-menu__item"  href="dashboard.html"><i class="side-menu__icon fa fa-home"></i><span class="side-menu__label">Home</span></a>
+            </li>
+            <!-- <li class="slide">
+              <a class="side-menu__item"  href="history.html"><i class="side-menu__icon fa fa-history"></i><span class="side-menu__label">History</span></a>
+            </li> -->
+            <li class="slide">
+              <a class="side-menu__item"  href="feedback.html"><i class="side-menu__icon fa fa-comment"></i><span class="side-menu__label">Feedback</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item"  href="settings.html"><i class="side-menu__icon ni ni-settings-gear-65"></i><span class="side-menu__label">Settings</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item"  href="profile.html"><i class="side-menu__icon fa fa-user-alt"></i><span class="side-menu__label">Profile</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" href="../../lc/home.html"><i class="side-menu__icon fa fa-gavel"></i><span class="side-menu__label">E-library</span></a>
+            </li>
+            <li style="margin-top:15px;">
+              <ul class="home-social-list">
+                <li class="animate-intro">
+                  <a href="tel:08131210744" target = "_blank"><i class="fas fa-phone"></i></a>
+                </li>
+                <li class="animate-intro">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://funmiquadrionline.com&quote=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="animate-intro">
+                  <a href="https://twitter.com/intent/tweet?via=LawCompanionNG&text=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target = "_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="animate-intro">
+                  <a href="https://api.whatsapp.com/send?text=Hi,%20I%20just%20downloaded%20law%20companion%%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target ="_blank"><i class="fab fa-whatsapp"></i></a>
+                </li>
+              </ul> <!-- end home-social-list -->
+            </li>
+          </ul>
+        </div>
+      </aside>        
+      <!-- Sidebar menu-->
+
+      <!-- app-content-->
+      <div class="app-content">
+        <div class="side-app">
+          <div class="main-content">
+          
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top  navbar-expand-md navbar-dark" id="navbar-main">
+          <div class="container-fluid">
+            <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
+            <span class="d-none d-md-flex" id="name"></span>
+            <!-- Brand -->
+            <a class="navbar-brand pt-0 d-md-none" href="dashboard.html">
+              <div class="signature-font">Funmi Quadri &amp; Co.</div>
+              <sub style="font-size: 12px">Law Companion Nini</sub>
+            </a>
+            <!-- User -->
+            <ul class="navbar-nav align-items-center ">
+              <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link pr-md-0 mr-md-2 pl-1" data-toggle="dropdown" href="#" role="button">
+                  <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle"><img alt="Image placeholder" src="../assets/img/user.png"></span>
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                  <div class=" dropdown-header noti-title text-center pb-3">
+                    <h3 class="text-capitalize text-dark mb-1" id="name1"></h3>
+                    <h6 class="text-overflow m-0">User</h6>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Top navbar-->    
+          </div>
+          <!-- Page content -->
+          <div class="container-fluid pt-8" style="padding-left: 20px;">
+            <div class="page-header mt-0  p-3">
+                <h3 class="mb-sm-0">Test Instruction</h3>
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="dashboard.html"><i class="fe fe-home">  Home</i></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Test Instruction</li>
+                </ol>
+            </div>
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <div class="card m-b-20">
+                  <div class="card-header">
+                    <div class="col-md-12">
+                      <div class="d-flex align-items-center mb-3 mt-3">
+                        <!-- <div class="w-7 h-7 bg-primary rounded-circle mr-4"></div>
+                          <div>
+                            <strong>Course</strong><br>
+                            <div id="course" style="text-transform: uppercase;"></div>
+                          </div>
+                        </div> -->
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Course Name</label>
+                      <input type="text" class="form-control" id="course" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Year</label>
+                      <select class="form-control" id="year">
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Question Count</label>
+                      <input type="text" class="form-control" id="count" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Exam Duration</label>
+                      <input type="text" class="form-control" id="duration" value="" readonly>
+                    </div>
+                    <div class="col-md-12 margin-top">
+                      <button class="btn btn-danger" id style="margin-top:10px;" onclick="location.href='dashboard.html'">Go Back</button>
+                      <button class="btn btn-dark" style="margin-top:10px;" onclick="location.href='settings.html'">Change Settings</button>
+                      <button class="btn btn-success" style="margin-top:10px;" onclick="proceed()">Proceed</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- Page Content-->
+        </div>
+      </div>
+      <!-- app-content-->
+    </div>
+  </div>
+    <!-- Back to top -->
+  <!-- Back to top -->
+  <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <!-- Adon Scripts -->
+  <!-- Core -->
+  <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/popper.js"></script>
+  <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/plugins/chart-circle/circle-progress.min.js"></script>
+
+  <!-- Optional JS -->
+  <script src="../assets/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+  <!-- Fullside-menu Js-->
+  <script src="../assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+  <!-- Custom scroll bar Js-->
+  <script src="../assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- peitychart -->
+  <script src="../assets/plugins/peitychart/jquery.peity.min.js"></script>
+  <script src="../assets/plugins/peitychart/peitychart.init.js"></script>
+
+  <!-- Adon JS -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/dashboard-service.js"></script>
+  <script>
+    $(document).ready(function(){
+      var course_name = localStorage.getItem("Course");
+      document.getElementById('course').value = course_name;
+      var name = localStorage.getItem("Name");
+      var device_id = localStorage.getItem("Id");
+      var first_count = localStorage.getItem("Count");
+      var first_duration = localStorage.getItem("Duration");
+      document.getElementById('count').value = first_count;
+      document.getElementById('duration').value = first_duration;
+      document.getElementById('name').innerHTML = 'Hi, ' + name;
+      document.getElementById('name1').innerHTML = name;
+      let url = "https://lawcompanioncbt.website/lccbt/public/api/user/settings/details?device_id=" + device_id
+      fetch(url, {
+        method: "POST",
+      })
+      .then((response) => {
+        return response.json()
+      })
+      .then((jsonData) => {
+        var count = jsonData.details.count
+        var duration = jsonData.details.duration
+        document.getElementById('count').value = count;
+        document.getElementById('duration').value = duration;
+      })
+    });
+  </script>
+  <script>
+    function proceed() {
+      var course = document.getElementById('course').value;
+      var count = document.getElementById('count').value ;
+      var duration = document.getElementById('duration').value;
+      var year = document.getElementById('year').value;
+      localStorage.setItem("Duration", duration);
+      localStorage.setItem("Course", course);
+      localStorage.setItem("Count", count);
+      localStorage.setItem("Year", year);
+      document.location.href = "take_test.html"
+    }
+  </script>
+</body>
+
+
+</html>

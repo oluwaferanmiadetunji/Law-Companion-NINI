@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="CBT App Admin">
+  <meta name="author" content="Adeyemo Adeolu">
+
+  <!-- Title -->
+  <title>Law Companion Nini</title>
+  <!-- Fonts-->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css"> -->
+  <!-- Favicon -->
+  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+  <!-- Fonts -->
+
+  <!-- Icons -->
+  <link href="../assets/css/icons.css" rel="stylesheet">
+
+  <!--Bootstrap.min css-->
+  <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Dashboard CSS -->
+  <link href="../assets/css/dashboard.css" rel="stylesheet" type="text/css">
+
+  <!-- Tabs CSS -->
+  <link href="../assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom scroll bar css-->
+  <link href="../assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+  <!-- Sidemenu Css -->
+  <link href="../assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+
+
+  <!--Select2 css-->
+  <link rel="stylesheet" href="../assets/plugins/select2/select2.css">
+  <script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+  <script>
+   // loading cordova
+   document.addEventListener("deviceready", onDeviceReady, false);
+   function onDeviceReady(){
+       document.addEventListener("offline", onOffline, false);
+       function onOffline() {
+           alert('No internet connection!');
+          onDeviceReady()
+       }
+   }
+</script>
+  
+  <script src="../../js/vue.js"></script>
+  <script src="../../js/axios.min.js"></script>
+
+  <style type="text/css">
+    td{
+        background: url(../assets/img/arrow_forward.png) no-repeat right center;
+      }
+    td a {
+      color: #fff
+      }
+  </style>
+</head>
+
+<body class="app sidebar-mini" style="overflow:auto">
+  <div id="global-loader" ></div>
+  <div class="page">
+    <div class="page-main">
+        <!-- Sidebar menu-->  
+      <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+      <aside class="app-sidebar " style="background-image: url(../assets/img/menu-bg.png);">
+        <div class="sidebar-img">
+          <a class="navbar-brand" href=""><span class="navbar-brand-img main-logo"><div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub></span><span class="navbar-brand-img logo"><sub><div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub></sub></span>
+          </a>
+          <ul class="side-menu ">
+            <li class="slide">
+              <a class="side-menu__item"  href="dashboard.html"><i class="side-menu__icon fa fa-home"></i><span class="side-menu__label">Home</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item"  href="history.html"><i class="side-menu__icon fa fa-history"></i><span class="side-menu__label">History</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item"  href="feedback.html"><i class="side-menu__icon fa fa-comment"></i><span class="side-menu__label">Feedback</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item"  href="settings.html"><i class="side-menu__icon ni ni-settings-gear-65"></i><span class="side-menu__label">Settings</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item"  href="profile.html"><i class="side-menu__icon fa fa-user-alt"></i><span class="side-menu__label">Profile</span></a>
+            </li>
+            <li class="slide">
+              <a class="side-menu__item" href="../../lc/home.html"><i class="side-menu__icon fa fa-gavel"></i><span class="side-menu__label">E-library</span></a>
+            </li>
+            <li style="margin-top:15px;">
+              <ul class="home-social-list">
+                <li class="animate-intro">
+                  <a href="tel:08131210744" target = "_blank"><i class="fas fa-phone"></i></a>
+                </li>
+                <li class="animate-intro">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://funmiquadrionline.com&quote=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="animate-intro">
+                  <a href="https://twitter.com/intent/tweet?via=LawCompanionNG&text=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target = "_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="animate-intro">
+                  <a href="https://api.whatsapp.com/send?text=Hi,%20I%20just%20downloaded%20law%20companion%%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target ="_blank"><i class="fab fa-whatsapp"></i></a>
+                </li>
+              </ul> <!-- end home-social-list -->
+            </li>
+          </ul>
+        </div>
+      </aside>        
+      <!-- Sidebar menu-->
+
+      <!-- app-content-->
+      <div class="app-content">
+        <div class="side-app">
+          <div class="main-content">
+          
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top  navbar-expand-md navbar-dark" id="navbar-main">
+          <div class="container-fluid">
+            <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
+            <span class="d-none d-md-flex" id="name"></span>
+            <!-- Brand -->
+            <a class="navbar-brand pt-0 d-md-none" href="dashboard.html">
+              <div class="signature-font">Funmi Quadri &amp; Co.</div>
+              <sub style="font-size: 12px">Law Companion Nini</sub>
+            </a>
+            <!-- User -->
+            <ul class="navbar-nav align-items-center ">
+              <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link pr-md-0 mr-md-2 pl-1" data-toggle="dropdown" href="#" role="button">
+                  <div class="media align-items-center">
+                    <span class="avatar avatar-sm rounded-circle"><img alt="Image placeholder" src="../assets/img/user.png"></span>
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                  <div class=" dropdown-header noti-title text-center pb-3">
+                    <h3 class="text-capitalize text-dark mb-1" id="name1"></h3>
+                    <h6 class="text-overflow m-0">User</h6>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Top navbar-->    
+          </div>
+          <!-- Page content -->
+           <!-- Page content -->
+            <div class="cntainer-fluid pt-8">
+              <div class="page-header mt-0  p-3">
+                  <a class="mb-sm-0 fa fa-arrow-left float-left" href="dashboard.html">&nbsp;&nbsp;&nbsp;Back Home</a>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card shadow">
+                    <div class="card-header">
+                      <h3 class="mb-3 text-center">Your Test Score</h3>
+                       <div class="progress" style="height:50px;">
+                        <div class="progress-bar progress-bar-striped active" id="progressbar" role="progressbar"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <h3 class="text-center mt-3" id="countPercent"></h3>
+                      </div>
+                    </div>
+                      <h4 class="mb-3 text-center margin-top">You got <span id="a"></span> questions out of <span id="b"></span> right</h4>
+                      <p style="margin-left: 3%;"><strong class="text-danger">Note: </strong>Click on each of the the questions below to see a detailed explanation</p>
+                    </div>
+
+                    <div class="card-body" id="app">
+                      <div class="row" style="cursor: pointer;" v-for="(question, index) in questions" @click="showModal(index)">
+                        <div class="col-6 border shadow">
+                         <p style="margin-left: 5%;">{{ question.question }} </p>
+                         </div>
+                        <div class="col-6 border shadow">
+                          <div class="float-left">
+                            <p>{{ question.answers[question.selectedIndex] }}</p>                                                       
+                          </div>
+                          <h2 class="text-success float-right" v-if="question.selectedIndex === question.correctIndex"> <i class="fa  fa-check"></i></h2>
+                          <h2 class="text-danger float-right"  v-if="question.selectedIndex !== question.correctIndex"> <i class="fa  fa-times"></i></h2>
+                        </div>
+                      </div>
+
+                      <!-- Modal -->
+                      <div class="modal" v-show="open" style="display: block; height: 500px;margin-top: 20px; overflow: auto;">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalCenterTitle">Question {{ index + 1 }}</h5>
+                            </div>
+                            <div class="modal-body">
+                              <h5>
+                                <span>{{ currentQuestion }}</span>
+                              </h5>
+                              <hr />
+                              <div class="">
+                                <ul class="list-group">
+                                  <li :class="[answerClass(index), defaultClass]" v-for="(answer, index) in currentAnswers">{{ answer }} {{index}}</li>
+                                </ul>
+                                </div>
+                                <div v-if="explanation">
+                                <hr />
+                                  <h3>
+                                    <span>Explanation</span>
+                                  </h3>
+                                  <p>{{ explanation }}</p>
+                                </div>
+                              </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" @click="closeModal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <style media="screen">
+    .correct {
+      background-color: green;
+    }
+    .incorrect {
+      background-color: red;
+    }
+  </style>
+    <!-- Back to top -->
+  <!-- Back to top -->
+  <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <!-- Adon Scripts -->
+  <!-- Core -->
+  <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/popper.js"></script>
+  <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/plugins/chart-circle/circle-progress.min.js"></script>
+
+  <!-- Optional JS -->
+  <script src="../assets/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+  <!-- Fullside-menu Js-->
+  <script src="../assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+  <!-- Custom scroll bar Js-->
+  <script src="../assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- peitychart -->
+  <script src="../assets/plugins/peitychart/jquery.peity.min.js"></script>
+  <script src="../assets/plugins/peitychart/peitychart.init.js"></script>
+
+  <!-- Adon JS -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/dashboard-service.js"></script>
+  <script>
+    $(document).ready(function(){
+      var name = localStorage.getItem("Name");
+      var correct = localStorage.getItem("CorrectQuestion") || 0;
+      var count = localStorage.getItem("Count");
+      document.getElementById('name').innerHTML = 'Hi, ' + name;
+      document.getElementById('name1').innerHTML = name;
+      document.getElementById('a').innerHTML = correct;
+      document.getElementById('b').innerHTML = count;
+      var correctPercent = (correct / count) * 100;
+      document.getElementById('countPercent').innerHTML = correctPercent + '%' || 0
+      document.getElementById('progressbar').style.width = correctPercent + '%' || 0;
+    });
+  </script>
+  <script>
+    new Vue({
+      el: '#app',
+      data () {
+        return {
+          questions: [],
+          testAnswer: null,
+          open: false,
+          index: null,
+          currentQuestion: null,
+          currentAnswers: null,
+          explanation: null,
+          correctIndex: null,
+          selectedIndex: null,
+          defaultClass: 'list-group-item'
+        }
+      },
+      methods: {
+        getQuestions(){
+          this.questions = JSON.parse(localStorage.getItem("Test"));
+          console.log(this.questions)
+        },
+        showModal(index) {
+          this.index = index
+          this.open = true
+          this.currentQuestion = this.questions[index].question
+          this.explanation = this.questions[index].explanation
+          this.currentAnswers = this.questions[index].answers
+          this.selectedIndex = this.questions[index].selectedIndex
+          this.correctIndex = this.questions[index].correctIndex
+        },
+        closeModal(){
+          this.open = false
+        },
+        answerClass(index) {
+          let answerClass = ''
+          if(this.correctIndex === index) {
+            answerClass = 'correct list-group-item'
+          } else if(this.selectedIndex === index && this.correctIndex !== index) {
+            answerClass = 'incorrect list-group-item'
+          }
+          return answerClass
+        }
+      },
+      mounted () {
+        this.getQuestions()
+      }
+    })
+  </script>
+</body>
+
+
+</html>

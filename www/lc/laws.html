@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Laws &dash; ELC</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/custom.css">
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+	<!-- fontawesome 5.0.4 js file -->
+	<script src="js/fontawesome-all.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+   <header>
+		<!--div class="header-logo">
+			<a href="index.html">ELC</a>
+		</div-->
+
+		<a id="header-menu-trigger" href="#0">
+		 	<span class="header-menu-text">Menu</span>
+		  	<span class="header-menu-icon"></span>
+		</a>
+
+		<nav id="menu-nav-wrap">
+
+			<a href="#0" class="close-button" title="close"><span>Close</span></a>
+
+			<p style = "font-size: 11pt">Law Companion.</p>
+
+			<ul class="nav-list fa-ul">
+				<li><a href="home.html" title=""><i class="fas fa-home" style = "font-size: 11pt; color: #22a6da"></i> &nbsp; Home</a></li>
+				<li><a href="cases.html" title=""><i class="fas fa-book" style = "font-size: 11pt; color: #22a6da"></i> &nbsp; Cases</a></li>
+				<li class="active"><a href="laws.html" title=""><i class="fas fa-gavel" style = "font-size: 11pt; color: #22a6da"></i> &nbsp; Laws</a></li>
+				<li><a href="rules.html" title=""><i class="fas fa-balance-scale" style = "font-size: 11pt; color: #22a6da"></i> &nbsp; Rules of Court</a></li>
+				<li><a href="citations.html" title=""><i class="fas fa-key" style = "font-size: 11pt; color: #22a6da"></i> &nbsp; Citations</a></li>
+				<li><a href="news.html" title=""><i class="far fa-newspaper" style = "font-size: 11pt; color: #22a6da"></i> &nbsp; News</a></li>
+				<li><a href="properties.html" title=""><i class="fas fa-building"style = "font-size: 11pt; color: #22a6da"></i> &nbsp; Properties</a></li>
+                <li><a href="../home.html" title=""><i class="fas fa-graduation-cap" style = "font-size: 11pt; color: #22a6da"></i> &nbsp;  Take Exam</a></li>
+			</ul>
+
+			<p class="sponsor-text">
+				 your companion in law...
+			</p>
+
+			<ul class="header-social-list">
+				 <li>
+					<a href="tel:08131210744" target = "_blank" style = "color: #22a6da;"><i class="fas fa-phone"></i></a>
+				 </li>
+				 <li>
+					<a href="https://www.facebook.com/LawCompanion" target = "_blank" style = "color: #22a6da;"><i class="fab fa-facebook-square"></i></a>
+				 </li>
+				 <li>
+					<a href="https://twitter.com/LawCompanionNG" target = "_blank" style = "color: #22a6da;"><i class="fab fa-twitter"></i></a>
+				 </li>
+				 <li>
+					<a href="https://api.whatsapp.com/send?phone=2348131210744" target = "_blank" style = "color: #22a6da;"><i class="fab fa-whatsapp"></i></a>
+				 </li>
+			</ul>
+
+		</nav>  <!-- end #menu-nav-wrap -->
+
+	</header> <!-- end header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home">
+
+   	<div class="overlay"></div>
+		<div class="home-content-table">
+			<div class="home-content-tablecell">
+				<div class="row">
+					<div class="col-twelve">
+						<h2 class="animate-intro">Laws</h2>
+						<form class="more animate-intro ajax-search" action = "" method = "POST">
+							<div class="more animate-intro">
+								<input type="text" placeholder="Enter search keyword" class="form-control input filterSearch" value = "">
+
+								<input class = "btn button stroke btn-info invisible" type="submit" value="Search" class="form-control">
+							</div>
+						</form>
+
+                        <div class="laws filterList" id="laws" style="color:#FFF;">
+							<a href = "http://lawcompanion.net/laws2/A1.html" class = "lawURL"><p>Abubakar Tafawa Balewa University, Bauchi Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A2.html"class = "lawURL"><p>Acts Authentication Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A3.html"class = "lawURL"><p>Administration of Justice Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A4.html" class = "lawURL"><p>Administrative Staff College of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A5.html" class = "lawURL"><p>Admiralty Jurisdiction Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A6.html" class = "lawURL"><p>Advance Fee Fraud and Other Fraud Related Offences Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A7.html" class = "lawURL"><p>Advertising Practitioners (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A8.html" class = "lawURL"><p>Advisory Council on Religious Affairs Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A9.html" class = "lawURL"><p>African Charter on Human and Peoples' Rights (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A10.html" class = "lawURL"><p>Agricultural and Rural Management Training Institute Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A11.html" class = "lawURL"><p>Agricultural Credit Guarantee Scheme Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A12.html" class = "lawURL"><p>Agricultural Research Council of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A13.html" class = "lawURL"><p>Agriculture (Control of Importation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A14.html" class = "lawURL"><p>Ahmadu Bello University Law</p></a>
+							<a href = "http://lawcompanion.net/laws2/A15.html" class = "lawURL"><p>Allocation of Revenue (Federation Account, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A16.html" class = "lawURL"><p>Anatomy Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A17.html" class = "lawURL"><p>Animal Diseases (Control) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A18.html" class = "lawURL"><p>Arbitration and Conciliation Act and shall apply throughout the Federation</p></a>
+							<a href = "http://lawcompanion.net/laws2/A19.html" class = "lawURL"><p>Architects (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A20.html" class = "lawURL"><p>Armed Forces Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A21.html" class = "lawURL"><p>Armed Forces Comfort Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A22.html" class = "lawURL"><p>Armed Forces (Disciplinary Proceedings) (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A23.html" class = "lawURL"><p>Armed Forces Pensions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A24.html" class = "lawURL"><p>Army Colour (Prohibition of Use) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A25.html" class = "lawURL"><p>Asset Management Corporation of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A26.html" class = "lawURL"><p>Associated Gas Re-injection Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A27.html" class = "lawURL"><p>Association of National Accountants of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/A28.html" class = "lawURL"><p>Allocation of Revenue (Abolition of Dichotomy in the Application of the Principle Derivation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B1.html" class = "lawURL"><p>Bank Employees, etc. (Declaration of Assets) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B2.html" class = "lawURL"><p>Bankruptcy Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B3.html" class = "lawURL"><p>Banks and Other Financial Institutions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B4.html" class = "lawURL"><p>Banks (Motor Vehicle Loans) (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B5.html" class = "lawURL"><p>Bayero University Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B6.html" class = "lawURL"><p>Bees (Import Control and Management) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B7.html" class = "lawURL"><p>Bight of Bonny Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B8.html" class = "lawURL"><p>Bills of Exchange Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B9.html" class = "lawURL"><p>Births, Deaths, etc. (Compulsory Registration) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B10.html" class = "lawURL"><p>Border Communities Development Agency (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B11.html" class = "lawURL"><p>Borstal Institutions and Remand Centres Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B12.html" class = "lawURL"><p>Boy Scouts Association Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B13.html" class = "lawURL"><p>Builders (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/B14.html" class = "lawURL"><p>Building Lines (Federal Trunk Roads) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C1.html" class = "lawURL"><p>Capital Gains Tax Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C2.html" class = "lawURL"><p>Carriage of Goods by Sea Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C3.html" class = "lawURL"><p>Casino Taxation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C4.html" class = "lawURL"><p>Central Bank of Nigeria (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C5.html" class = "lawURL"><p>Centre for Automotive Design and Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C6.html" class = "lawURL"><p>Centre for Black and African Arts and Civilisation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C7.html" class = "lawURL"><p>Chartered Institute of Administration Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C8.html" class = "lawURL"><p>Chartered Institute of Bankers of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C9.html" class = "lawURL"><p>Chartered Institute of Stockbrokers Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C10.html" class = "lawURL"><p>Chartered Institute of Taxation of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C11.html" class = "lawURL"><p>Chartered Insurance Institute of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C12.html" class = "lawURL"><p>Citizenship and Leadership Training Centre Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C13.html" class = "lawURL"><p>Civil Aviation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C14.html" class = "lawURL"><p>Civil Aviation (Fire and Security Measures) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C15.html" class = "lawURL"><p>Code of Conduct Bureau and Tribunal Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C16.html" class = "lawURL"><p>Coins Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C17.html" class = "lawURL"><p>Commodity Boards Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C18.html" class = "lawURL"><p>Community Banks Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C19.html" class = "lawURL"><p>Community Health Practitioners (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C20.html" class = "lawURL"><p>Companies and Allied Matters Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C21.html" class = "lawURL"><p>Companies Income Tax Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C22.html" class = "lawURL"><p>Computer Professionals (Registration Council of Nigeria) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C23.html" class = "lawURL"><p>Constitution of the Federal Republic of Nigeria (Promulgation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C24.html" class = "lawURL"><p>Consular Conventions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C25.html" class = "lawURL"><p>Consumer Protection Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C26.html" class = "lawURL"><p>Control of Advertisement (Federal Highways) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C27.html" class = "lawURL"><p>Co-operative Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C28.html" class = "lawURL"><p>Copyright Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C29.html" class = "lawURL"><p>Corneal Grafting Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C30.html" class = "lawURL"><p>Corporate Bodies (Members’ Emoluments) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C31.html" class = "lawURL"><p>Corrupt Practices and Other Related Offences Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C32.html" class = "lawURL"><p>Council of Ministers (Evidence) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C33.html" class = "lawURL"><p>Council of Nigerian Mining Engineers and Geoscientists Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C34.html" class = "lawURL"><p>Counterfeit and Fake Drugs and Unwholesome Processed Foods (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C35.html" class = "lawURL"><p>Counterfeit Currency (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C36.html" class = "lawURL"><p>Court of Appeal Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C37.html" class = "lawURL"><p>Creation of States and Boundary Adjustments (Procedure) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C38.html" class = "lawURL"><p>Criminal Code Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C39.html" class = "lawURL"><p>Criminal Justice (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C40.html" class = "lawURL"><p>Criminal Justice (Release from Custody) (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C41.html" class = "lawURL"><p>Criminal Procedure Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C42.html" class = "lawURL"><p>Criminal Procedure (Northern States) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C43.html" class = "lawURL"><p>Currency Conversion (Freezing Orders) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C44.html" class = "lawURL"><p>Currency Offences Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C45.html" class = "lawURL"><p>Customs and Excise Management Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C46.html" class = "lawURL"><p>Customs and Excise Management (Disposal of Goods) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C47.html" class = "lawURL"><p>Customs and Excise (Special Penal and Other Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C48.html" class = "lawURL"><p>Customs Duties (Dumped and Subsidised Goods) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C49.html" class = "lawURL"><p>Customs, Excise Tariff, etc. (Consolidation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C50.html" class = "lawURL"><p>Child Rights Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C51.html" class = "lawURL"><p>Coastal and Inland Shipping (Sabotage) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C52.html" class = "lawURL"><p>Compulsory, Free Universal Basic Education Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C53.html" class = "lawURL"><p>Chartered Institute of Purchasing and Supply Management of Nigeria (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C54.html" class = "lawURL"><p>Council for the Regulation of Freight Forwarding in Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/C55.html" class = "lawURL"><p>Chartered Institute of Professional Printers of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D1.html" class = "lawURL"><p>Dangerous Drugs Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D2.html" class = "lawURL"><p>Decimal Currency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D3.html" class = "lawURL"><p>Deep Offshore and Inland Basin Production Sharing Contracts Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D4.html" class = "lawURL"><p>Defence Industries Corporation of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D5.html" class = "lawURL"><p>Defence Industries Corporation of Nigeria (Exclusion of Armed Forces Armament De-pot Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D6.html" class = "lawURL"><p>Dental Technologists (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D7.html" class = "lawURL"><p>Dental Therapists (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D8.html" class = "lawURL"><p>Designation of Enactments Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D9.html" class = "lawURL"><p>Diplomatic Immunities and Privileges Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D10.html" class = "lawURL"><p>Directorate of Food, Roads and Rural Infrastructures Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D11.html" class = "lawURL"><p>Dishonoured Cheques (Offences) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/D12.html" class = "lawURL"><p>Debt Management Office (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E1.html" class = "lawURL"><p>Economic and Financial Crimes Commission (Establishment etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E2.html" class = "lawURL"><p>Educational Correspondence Colleges Accreditation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E3.html" class = "lawURL"><p>Education (National Minimum Standards and Establishment of Institutions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E4.html" class = "lawURL"><p>Education Tax Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E5.html" class = "lawURL"><p>Elections (Registration, etc. of Voters) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E6.html" class = "lawURL"><p>Electoral Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E7.html" class = "lawURL"><p>Electric Power Sector Reform Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E7A.html" class = "lawURL"><p>Employees' Compensation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E8.html" class = "lawURL"><p>Employees Housing Schemes (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E9.html" class = "lawURL"><p>Endangered Species (Control of International Trade and Traffic) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E10.html" class = "lawURL"><p>Energy Commission of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E11.html" class = "lawURL"><p>Engineers (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E12.html" class = "lawURL"><p>Environmental Impact Assessment Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E13.html" class = "lawURL"><p>Estate Surveyors and Valuers (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E14.html" class = "lawURL"><p>Evidence Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E15.html" class = "lawURL"><p>Examination Malpractices Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E16.html" class = "lawURL"><p>Excise (Control of Distillation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E17.html" class = "lawURL"><p>Exclusive Economic Zone Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E18.html" class = "lawURL"><p>Explosives Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E19.html" class = "lawURL"><p>Export (Incentives and Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E20.html" class = "lawURL"><p>Export of Nigerian Produce Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E21.html" class = "lawURL"><p>Export Produce (Federal Powers) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E22.html" class = "lawURL"><p>Export (Prohibition) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E23.html" class = "lawURL"><p>External Loans (Rehabilitation, Reconstruction and Development) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E24.html" class = "lawURL"><p>External Trade Letters of Credit (Control) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E25.html" class = "lawURL"><p>Extradition Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/E26.html" class = "lawURL"><p>Extradition Treaty between the Government of the Federal Republic of Nigeria and the
+							Government of the Republic of South Africa (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F1.html" class = "lawURL"><p>Factories Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F2.html" class = "lawURL"><p>Failed Banks (Recovery of Debts) and Financial Malpractices in Banks Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F3.html" class = "lawURL"><p>Family Economic Advancement Programme (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F4.html" class = "lawURL"><p>Family Support Trust Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F5.html" class = "lawURL"><p>Federal Airports Authority of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F6.html" class = "lawURL"><p>Federal Capital Territory Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F7.html" class = "lawURL"><p>Federal Character Commission (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F8.html" class = "lawURL"><p>Federal Colleges of Education Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F9.html" class = "lawURL"><p>Federal Commission (Privileges and Immunities) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F10.html" class = "lawURL"><p>Repealed by National Environmental Standards and Regulations Enforcement Agency Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F11.html" class = "lawURL"><p>Federal Government Staff Housing Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F12.html" class = "lawURL"><p>Federal High Court Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F13.html" class = "lawURL"><p>Federal Highways Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F14.html" class = "lawURL"><p>Federal Housing Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F15.html" class = "lawURL"><p>Federal Lands Registry (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F16.html" class = "lawURL"><p>Federal Mortgage Bank of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F17.html" class = "lawURL"><p>Federal Polytechnics Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F18.html" class = "lawURL"><p>Federal Radio Corporation of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F19.html" class = "lawURL"><p>Federal Road Safety Commission (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F20.html" class = "lawURL"><p>Federal Savings Bank Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F21.html" class = "lawURL"><p>Federal School of Surveying Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F22.html" class = "lawURL"><p>Federal Universities of Agriculture Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F23.html" class = "lawURL"><p>Federal Universities of Technology Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F24.html" class = "lawURL"><p>Federal Urban Mass Transit Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F25.html" class = "lawURL"><p>Fertilizer (Control) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F26.html" class = "lawURL"><p>Finance (Control and Management) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F27.html" class = "lawURL"><p>Financial Year Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F28.html" class = "lawURL"><p>Firearms Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F29.html" class = "lawURL"><p>Fire Service Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F30.html" class = "lawURL"><p>Flag and Coats of Arms Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F31.html" class = "lawURL"><p>Flags of Nigerian Ships Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F32.html" class = "lawURL"><p>Food and Drugs Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F33.html" class = "lawURL"><p>Food, Drugs and Related Products (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F34.html" class = "lawURL"><p>Foreign Exchange (Monitoring and Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F35.html" class = "lawURL"><p>Foreign Judgments (Reciprocal Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F36.html" class = "lawURL"><p>Federal Inland Revenue Service (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F37.html" class = "lawURL"><p>Federal Judicial Officers (Administration of Pensions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F38.html" class = "lawURL"><p>Federal Roads Maintenance Agency (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F39.html" class = "lawURL"><p>Federal Capital Territory Customary Court Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/F40.html" class = "lawURL"><p>Fiscal Responsibility Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/G1.html" class = "lawURL"><p>Gaming Machines (Prohibition) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/G2.html" class = "lawURL"><p>General Loan and Stock Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/G3.html" class = "lawURL"><p>Geneva Conventions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/G4.html" class = "lawURL"><p>Government Promissory Notes Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H1.html" class = "lawURL"><p>Harmful Waste (Special Criminal Provisions, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H2.html" class = "lawURL"><p>Health Records Officers (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H3.html" class = "lawURL"><p>Hides and Skins Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H4.html" class = "lawURL"><p>Hire-purchase Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H5.html" class = "lawURL"><p>Hydrocarbon Oil Refineries Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H5A.html" class = "lawURL"><p>Hydroelectric Power Producing Areas Development Commission (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/H6.html" class = "lawURL"><p>High Court of the Federal Capital Territory, Abuja (Number of Judges) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I1.html" class = "lawURL"><p>Immigration Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I2.html" class = "lawURL"><p>Immigration and Prisons Services Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I3.html" class = "lawURL"><p>Import (Prohibition) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I4.html" class = "lawURL"><p>Income Tax (Authorised Communications) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I6.html" class = "lawURL"><p>Indian Hemp Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I7.html" class = "lawURL"><p>Industrial Development (Income Tax Relief) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I8.html" class = "lawURL"><p>Industrial Inspectorate Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I9.html" class = "lawURL"><p>Industrial Training Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I10.html" class = "lawURL"><p>Inland Fisheries Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I11.html" class = "lawURL"><p>Institute of Chartered Accountants of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I12.html" class = "lawURL"><p>Institute of Chartered Chemists of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I13.html" class = "lawURL"><p>Institute of Chartered Secretaries and Administrators of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I14.html" class = "lawURL"><p>Institute of Medical Laboratory Science and Technology Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I15.html" class = "lawURL"><p>Institute of Personnel Management of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I16.html" class = "lawURL"><p>Institute of Public Analysts of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I17.html" class = "lawURL"><p>Insurance Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I18.html" class = "lawURL"><p>Internal Loans Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I19.html" class = "lawURL"><p>Internal Loans (Rehabilitation, Reconstruction and Development) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I20.html" class = "lawURL"><p>International Centre for Settlement of Investment Disputes (Enforcement of Awards) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I21.html" class = "lawURL"><p>International Financial Organisations Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I22.html" class = "lawURL"><p>International Institute of Tropical Agriculture Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I23.html" class = "lawURL"><p>Interpretation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I24.html" class = "lawURL"><p>Investments and Securities Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I25.html" class = "lawURL"><p>Irrua Specialist Teaching Hospital Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I25A.html" class = "lawURL"><p>Infrastructure Concession Regulatory Commission (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I26.html" class = "lawURL"><p>International Convention for the Safety of Life at Sea (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I27.html" class = "lawURL"><p>Institute for Peace and Conflict Resolution (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I28.html" class = "lawURL"><p>International Convention for the Prevention of Pollution from Ships 1973 and the 1978 Protocol (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I29.html" class = "lawURL"><p>International Convention on Civil Liability for Oil Pollution Damage (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I30.html" class = "lawURL"><p>International Convention on the Establishment of an International Fund for Compen¬sation for Oil Pollution Damage 1971 as amended (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/I31.html" class = "lawURL"><p>Institute for Democratic and Legislative Studies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/J1.html" class = "lawURL"><p>Joint Admissions and Matriculation Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L1.html" class = "lawURL"><p>Labour Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L2.html" class = "lawURL"><p>Lagos International Trade Fair Complex Management Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L3.html" class = "lawURL"><p>Lagos Port Operations (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L4.html" class = "lawURL"><p>Lagos University Teaching Hospital Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L5.html" class = "lawURL"><p>Land Use Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L6.html" class = "lawURL"><p>Land Use Act (Validation of Certain Laws, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L7.html" class = "lawURL"><p>Lands (Title Vesting, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L8.html" class = "lawURL"><p>Law Officers Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L9.html" class = "lawURL"><p>Legal Aid Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L10.html" class = "lawURL"><p>Legal Education (Consolidation, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L11.html" class = "lawURL"><p>Legal Practitioners Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L12.html" class = "lawURL"><p>Legislative Houses (Powers and Privileges) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L13.html" class = "lawURL"><p>Librarians (Registration, etc.) Council of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L14.html" class = "lawURL"><p>Live Fish (Control of Importation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L15.html" class = "lawURL"><p>Loans Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L16.html" class = "lawURL"><p>Loan (State Development) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/L17.html" class = "lawURL"><p>Local Loans (Registered Stock and Securities) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M1.html" class = "lawURL"><p>Maintenance Orders Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M2.html" class = "lawURL"><p>Marine Insurance Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M3.html" class = "lawURL"><p>Maritime Academy of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M4.html" class = "lawURL"><p>Maritime Operations Co-ordinating Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M5.html" class = "lawURL"><p>Marketing (Breast-Milk Substitutes) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M6.html" class = "lawURL"><p>Marriage Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M7.html" class = "lawURL"><p>Matrimonial Causes Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M8.html" class = "lawURL"><p>Medical and Dental Practitioners Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M9.html" class = "lawURL"><p>Medical Rehabilitation Therapists (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M10.html" class = "lawURL"><p>Merchandise Marks Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M11.html" class = "lawURL"><p>Merchant Shipping Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M12.html" class = "lawURL"><p>Minerals and Mining Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M13.html" class = "lawURL"><p>Mines and Quarries (Control of Buildings, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M14.html" class = "lawURL"><p>Ministers' Statutory Power and Duties (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M15.html" class = "lawURL"><p>Ministry of Finance Incorporated Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M16.html" class = "lawURL"><p>Minor Offences (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M17.html" class = "lawURL"><p>Miscellaneous Offences Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M18.html" class = "lawURL"><p>Money Laundering (Prohibition) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M19.html" class = "lawURL"><p>Mortgage Institutions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M20.html" class = "lawURL"><p>Motor Spirit (Returns) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M21.html" class = "lawURL"><p>Motor Vehicles (Prohibition of Tinted Glass) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M22.html" class = "lawURL"><p>Motor Vehicles (Third Party Insurance) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M23.html" class = "lawURL"><p>Motor Vehicles (Third Party Liability Insurance) (Ecowas Brown Card Scheme) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M24.html" class = "lawURL"><p>Mutual Assistance in Criminal Matters within the Commonwealth (Enactment and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M25.html" class = "lawURL"><p>Medical Laboratory Science Council of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/M26.html" class = "lawURL"><p>Monitoring of Revenue Allocation to Local Governments Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N1.html" class = "lawURL"><p>National Agency for Food and Drug Administration and Control Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N2.html" class = "lawURL"><p>National Agency for Population Programmes and Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N3.html" class = "lawURL"><p>National Agency for Science and Engineering Infrastructure Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N4.html" class = "lawURL"><p>National Agricultural Land Development Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N5.html" class = "lawURL"><p>National Agricultural Seeds Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N6.html" class = "lawURL"><p>National Archives Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N7.html" class = "lawURL"><p>National Assembly Service Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N8.html" class = "lawURL"><p>National Automotive Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N9.html" class = "lawURL"><p>National Board for Technical Education Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N10.html" class = "lawURL"><p>National Boundary Commission (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N11.html" class = "lawURL"><p>National Broadcasting Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N12.html" class = "lawURL"><p>National Business and Technical Examinations Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N13.html" class = "lawURL"><p>National Centre for Agricultural Mechanisation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N14.html" class = "lawURL"><p>National Centre for Economic Management and Administration Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N15.html" class = "lawURL"><p>National Centre for Women Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N17.html" class = "lawURL"><p>National Commission for Colleges of Education Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N18.html" class = "lawURL"><p>National Commission for Mass Literacy, Adult and Non-Formal Education Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N19.html" class = "lawURL"><p>National Commission for Museums and Monuments Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N20.html" class = "lawURL"><p>National Commission for Nomadic Education Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N21.html" class = "lawURL"><p>National Commission for Refugees, etc., Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N22.html" class = "lawURL"><p>National Commission for Rehabilitation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N23.html" class = "lawURL"><p>National Commission for Women Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N24.html" class = "lawURL"><p>National Committee on Geographical Names Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N25.html" class = "lawURL"><p>National Council for Arts and Culture Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N26.html" class = "lawURL"><p>National Council of Nigerian Vision (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N27.html" class = "lawURL"><p>National Crop Varieties and Livestock Breeds (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N28.html" class = "lawURL"><p>National Directorate of Employment Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N29.html" class = "lawURL"><p>National Drug Formulary and Essential Drugs List Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N30.html" class = "lawURL"><p>National Drug Law Enforcement Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N31.html" class = "lawURL"><p>National Economic Intelligence Committee (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N32.html" class = "lawURL"><p>National Economic Reconstruction Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N33.html" class = "lawURL"><p>National Electric Power Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N34.html" class = "lawURL"><p>National Emergency Management Agency (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N35.html" class = "lawURL"><p>National Endowment for the Arts Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N37.html" class = "lawURL"><p>National Examinations Council (NECO) (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N38.html" class = "lawURL"><p>National Eye Centre Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N39.html" class = "lawURL"><p>National Fertilizer Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N40.html" class = "lawURL"><p>National Film and Video Censors Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N41.html" class = "lawURL"><p>National Gallery of Art Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N42.html" class = "lawURL"><p>National Health Insurance Scheme Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N43.html" class = "lawURL"><p>National Honours Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N44.html" class = "lawURL"><p>National Hospital for Women and Children, Abuja (Establishment, etc.)</p></a>
+							<a href = "http://lawcompanion.net/laws2/N45.html" class = "lawURL"><p>National Housing Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N46.html" class = "lawURL"><p>National Human Rights Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N47.html" class = "lawURL"><p>National Inland Waterways Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N48.html" class = "lawURL"><p>National Institute for Cultural Orientation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N49.html" class = "lawURL"><p>National Institute for Labour Studies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N50.html" class = "lawURL"><p>National Institute for Nigerian Languages Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N51.html" class = "lawURL"><p>National Institute for Policy and Strategic Studies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N52.html" class = "lawURL"><p>National Institute for Sports Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N53.html" class = "lawURL"><p>National Insurance Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N54.html" class = "lawURL"><p>National Insurance Corporation of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N55.html" class = "lawURL"><p>National Judicial Institute Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N56.html" class = "lawURL"><p>National Library Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N57.html" class = "lawURL"><p>National Manpower Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N58.html" class = "lawURL"><p>National Mathematical Centre Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N59.html" class = "lawURL"><p>National Medical College Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N60.html" class = "lawURL"><p>National Metallurgical Development Centre Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N61.html" class = "lawURL"><p>National Minimum Wage Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N62.html" class = "lawURL"><p>National Office for Technology Acquisition and Promotion Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N63.html" class = "lawURL"><p>National Open University Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N64.html" class = "lawURL"><p>National Orientation Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N65.html" class = "lawURL"><p>National Park Service Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N66.html" class = "lawURL"><p>National Planning Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N67.html" class = "lawURL"><p>National Population Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N68.html" class = "lawURL"><p>National Primary Education Commission, etc., Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N69.html" class = "lawURL"><p>National Primary Health Care Development Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N70.html" class = "lawURL"><p>National Productivity Centre Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N71.html" class = "lawURL"><p>National Programme on Immunisation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N72.html" class = "lawURL"><p>National Salaries, Incomes and Wages Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N73.html" class = "lawURL"><p>National Secondary Education Commission, etc., Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N74.html" class = "lawURL"><p>National Security Agencies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N75.html" class = "lawURL"><p>National Shipping Policy Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N76.html" class = "lawURL"><p>National Steel Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N77.html" class = "lawURL"><p>National Steel Raw Materials Exploration Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N78.html" class = "lawURL"><p>National Sugar Development Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N79.html" class = "lawURL"><p>National Teachers' Institute Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N80.html" class = "lawURL"><p>National Theatre and the National Troupe of Nigeria Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N81.html" class = "lawURL"><p>National Universities Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N82.html" class = "lawURL"><p>National War College Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N83.html" class = "lawURL"><p>National Water Resources Institute Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N84.html" class = "lawURL"><p>National Youth Service Corps Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N85.html" class = "lawURL"><p>News Agency of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N86.html" class = "lawURL"><p>Niger-Delta Development Commission (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N87.html" class = "lawURL"><p>Nigeria LNG (Fiscal Incentives, Guarantees and Assurances) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N88.html" class = "lawURL"><p>Nigeria Social Insurance Trust Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N89.html" class = "lawURL"><p>Nigerian Agricultural Insurance Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N90.html" class = "lawURL"><p>Nigerian Airspace Management Agency (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N91.html" class = "lawURL"><p>Nigerian Atomic Energy Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N92.html" class = "lawURL"><p>Nigerian Bank for Commerce and Industry Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N93.html" class = "lawURL"><p>Nigerian Children's Trust Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N94.html" class = "lawURL"><p>Nigerian Civil Aviation Authority (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N95.html" class = "lawURL"><p>Nigerian Coal Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N96.html" class = "lawURL"><p>Nigerian College of Aviation Technology Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N97.html" class = "lawURL"><p>Nigerian Communications Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N98.html" class = "lawURL"><p>Nigerian Co-operative Societies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N99.html" class = "lawURL"><p>Nigerian Council for Management Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N100.html" class = "lawURL"><p>Nigerian Customs Service Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N101.html" class = "lawURL"><p>Nigerian Defence Academy Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N102.html" class = "lawURL"><p>Nigeria Deposit Insurance Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N103.html" class = "lawURL"><p>Nigerian Dock Labour Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N104.html" class = "lawURL"><p>Nigerian Education Bank Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N105.html" class = "lawURL"><p>Nigerian Educational Research and Development Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N106.html" class = "lawURL"><p>Nigerian Export-Import Bank Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N107.html" class = "lawURL"><p>Nigeria Export Processing Zones Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N108.html" class = "lawURL"><p>Nigerian Export Promotion Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N109.html" class = "lawURL"><p>Nigerian Film Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N110.html" class = "lawURL"><p>Nigerian Football Association Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N110A.html" class = "lawURL"><p>Nigeria Hydrological Services Agency (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N111.html" class = "lawURL"><p>Nigerian Industrial Development Bank (Guarantee) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N112.html" class = "lawURL"><p>Nigerian Institute of Advanced Legal Studies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N113.html" class = "lawURL"><p>Nigerian Institute of International Affairs Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N114.html" class = "lawURL"><p>Nigerian Institute of Public Relations Practitioners Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N115.html" class = "lawURL"><p>Nigerian Institute of Social and Economic Research Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N116.html" class = "lawURL"><p>Nigerian Institute of Transport Technology Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N117.html" class = "lawURL"><p>Nigerian Investment Promotion Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N118.html" class = "lawURL"><p>Nigerian Law Reform Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N119.html" class = "lawURL"><p>Nigerian Legion Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N120.html" class = "lawURL"><p>Nigerian Mining Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N121.html" class = "lawURL"><p>Nigerian National Heroes Register Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N122.html" class = "lawURL"><p>Nigerian National Merit Award Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N123.html" class = "lawURL"><p>Nigerian National Petroleum Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N124.html" class = "lawURL"><p>Nigerian National Petroleum Corporation (Projects) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N124A.html" class = "lawURL"><p>Nigerian Oil and Gas Industry Content Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N126.html" class = "lawURL"><p>Nigerian Ports Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N127.html" class = "lawURL"><p>Nigerian Postal Service Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N128.html" class = "lawURL"><p>Nigerian Press Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N129.html" class = "lawURL"><p>Nigerian Railway Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N130.html" class = "lawURL"><p>Nigerian Red Cross Society Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N131.html" class = "lawURL"><p>Nigeria Reinsurance Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N132.html" class = "lawURL"><p>Nigerian Research Institutes Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N133.html" class = "lawURL"><p>Nigerian Shippers' Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N134.html" class = "lawURL"><p>Nigerian Steel Development Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N135.html" class = "lawURL"><p>Nigerian Technical Aid Corps Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N136.html" class = "lawURL"><p>Nigerian Television Authority Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N137.html" class = "lawURL"><p>Nigerian Tourism Development Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N138.html" class = "lawURL"><p>Nigerian Urban and Regional Planning Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N139.html" class = "lawURL"><p>Nnamdi Azikiwe University Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N140.html" class = "lawURL"><p>Nnamdi Azikiwe University Teaching Hospital Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N141.html" class = "lawURL"><p>Notaries Public Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N142.html" class = "lawURL"><p>Nuclear Safety and Radiation Protection Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N143.html" class = "lawURL"><p>Nursing and Midwifery (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N144.html" class = "lawURL"><p>National Institute of Marketing of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N145.html" class = "lawURL"><p>National Lottery Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N146.html" class = "lawURL"><p>Nigeria Security and Civil Defence Corps Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N147.html" class = "lawURL"><p>Nigerian Accounting Standards Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N148.html" class = "lawURL"><p>Nigerian Council of Registered Insurance Brokers Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N149.html" class = "lawURL"><p>Nigerian Institute of Management (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N150.html" class = "lawURL"><p>Nigerian Institute of Science Laboratory Technology Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N152.html" class = "lawURL"><p>Nigerian Meteorological Agency (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N153.html" class = "lawURL"><p>National Hajj Commission of Nigeria (NAHCON) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N154.html" class = "lawURL"><p>National Identity Management Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N155.html" class = "lawURL"><p>National Industrial Court Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N156.html" class = "lawURL"><p>National Information Technology Development Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N157.html" class = "lawURL"><p>National Oil Spill Detection Response Agency (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N157A.html" class = "lawURL"><p>National Space Research and Development Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N158.html" class = "lawURL"><p>Nigeria Christian Pilgrim Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N159.html" class = "lawURL"><p>Nigeria Extractive Industries Transparency Initiative Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N160.html" class = "lawURL"><p>Nigerian Institute of Animal Science Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N161.html" class = "lawURL"><p>Nigerian Maritime Administration and Safety Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N162.html" class = "lawURL"><p>Nigerian Minerals and Mining Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N163.html" class = "lawURL"><p>National Agency for the Control of HIV and AIDS (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/N164.html" class = "lawURL"><p>National Environmental Standards and Regulations Enforcement Agency (Establishment) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O1.html" class = "lawURL"><p>Oaths Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O2.html" class = "lawURL"><p>Obafemi Awolowo University (Transitional Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O3.html" class = "lawURL"><p>Official Secrets Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O4.html" class = "lawURL"><p>Off-Shore Oil Revenues (Registration of Grants) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O5.html" class = "lawURL"><p>Oil and Gas Export Free Zone Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O6.html" class = "lawURL"><p>Oil in Navigable Waters Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O7.html" class = "lawURL"><p>Oil Pipelines Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O8.html" class = "lawURL"><p>Oil Terminal Dues Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O9.html" class = "lawURL"><p>Optometrists and Dispensing Opticians (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O10.html" class = "lawURL"><p>Orthopedic Hospitals Management Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/O11.html" class = "lawURL"><p>Oso Condensate Project Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P1.html" class = "lawURL"><p>Passport (Miscellaneous Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P2.html" class = "lawURL"><p>Patents and Designs Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P3.html" class = "lawURL"><p>Penal Code (Northern States) Federal Provisions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P4.html" class = "lawURL"><p>Pension Reform Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P5.html" class = "lawURL"><p>Pension Rights of Judges Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P6.html" class = "lawURL"><p>Pensions (Transfer of Responsibility) (United Kingdom Agreement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P7.html" class = "lawURL"><p>People's Bank of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P8.html" class = "lawURL"><p>Personal Income Tax Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P9.html" class = "lawURL"><p>Pest Control of Produce (Special Powers) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P10.html" class = "lawURL"><p>Petroleum Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P11.html" class = "lawURL"><p>Petroleum Equalisation Fund (Management Board, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P12.html" class = "lawURL"><p>Petroleum Production and Distribution (Anti-Sabotage) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P13.html" class = "lawURL"><p>Petroleum Profits Tax Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P14.html" class = "lawURL"><p>Petroleum (Special) Trust Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P15.html" class = "lawURL"><p>Petroleum Technology Development Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P16.html" class = "lawURL"><p>Petroleum Training Institute Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P17.html" class = "lawURL"><p>Pharmacists Council of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P18.html" class = "lawURL"><p>Piers Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P19.html" class = "lawURL"><p>Police Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P20.html" class = "lawURL"><p>Police and Other Agencies Pensions Offices (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P21.html" class = "lawURL"><p>Police (Pension Rights of the Inspector-General of Police) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P22.html" class = "lawURL"><p>Population Activities Fund Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P23.html" class = "lawURL"><p>Ports (Related Offences, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P24.html" class = "lawURL"><p>Posts and Telecommunications Proceedings Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P25.html" class = "lawURL"><p>Pre-Shipment Inspection of Exports Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P26.html" class = "lawURL"><p>Pre-Shipment Inspection of Imports Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P27.html" class = "lawURL"><p>Prevention of Crimes Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P28.html" class = "lawURL"><p>Price Control Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P29.html" class = "lawURL"><p>Prisons Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P30.html" class = "lawURL"><p>Private Guard Companies Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P31.html" class = "lawURL"><p>Probates (Re-sealing) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P32.html" class = "lawURL"><p>Produce (Enforcement of Export Standards) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P33.html" class = "lawURL"><p>Professional Bodies (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P34.html" class = "lawURL"><p>Psychiatric Hospitals Management Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P35.html" class = "lawURL"><p>Public Accounts Committee Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P36.html" class = "lawURL"><p>Public Accounts Implementation Tribunal Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P37.html" class = "lawURL"><p>Public Complaints Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P38.html" class = "lawURL"><p>Public Enterprises (Privatisation and Commercialisation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P39.html" class = "lawURL"><p>Public Enterprises Regulatory Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P40.html" class = "lawURL"><p>Public Holidays Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P41.html" class = "lawURL"><p>Public Officers Protection Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P42.html" class = "lawURL"><p>Public Order Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P43.html" class = "lawURL"><p>Petroleum Products Pricing Regulatory Agency (Establishment, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/P44.html" class = "lawURL"><p>Public Procurement Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/Q1.html" class = "lawURL"><p>Quantity Surveyors (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/Q2.html" class = "lawURL"><p>Quarantine Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R1.html" class = "lawURL"><p>Radiographers (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R2.html" class = "lawURL"><p>Railway Loan (International Bank) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R3.html" class = "lawURL"><p>Raw Materials Research and Development Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R4.html" class = "lawURL"><p>Recovery of Public Property (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R5.html" class = "lawURL"><p>Regional Centre for International Commercial Arbitration Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R6.html" class = "lawURL"><p>Remuneration of Former Presidents and Heads of State (and other Ancillary Matters) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R7.html" class = "lawURL"><p>Revenue Mobilisation, Allocation and Fiscal Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R8.html" class = "lawURL"><p>Revolving Loans Fund for Industry Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R9.html" class = "lawURL"><p>River Basins Development Authorities Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R10.html" class = "lawURL"><p>River Niger Transit Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R11.html" class = "lawURL"><p>Robbery and Firearms (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/R12.html" class = "lawURL"><p>Rotterdam Convention on the Prior Informed Consent Procedure for Certain Hazardous Chemicals and Pesticides in International Trade (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S1.html" class = "lawURL"><p>Saving Bonds and Certificates Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S2.html" class = "lawURL"><p>School Year (Variation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S3.html" class = "lawURL"><p>Scientific and Industrial Research Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S4.html" class = "lawURL"><p>Sea Fisheries Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S5.html" class = "lawURL"><p>Sheda Science and Technology Complex Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S6.html" class = "lawURL"><p>Sheriffs and Civil Process Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S7.html" class = "lawURL"><p>Social Development Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S8.html" class = "lawURL"><p>Stamp Duties Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S9.html" class = "lawURL"><p>Standards Organisation of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S10.html" class = "lawURL"><p>Statistics Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S11.html" class = "lawURL"><p>Statutory Corporations, etc. (Special Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S12.html" class = "lawURL"><p>Statutory Corporations (Modification, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S13.html" class = "lawURL"><p>Statutory Corporations Pensionable Officer (Retiring Age Limit) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S14.html" class = "lawURL"><p>Students' Union Activities (Control and Regulation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S15.html" class = "lawURL"><p>Supreme Court Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S16.html" class = "lawURL"><p>Supreme Court (Additional Original Jurisdiction) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S17.html" class = "lawURL"><p>Survey Co-ordination Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S18.html" class = "lawURL"><p>Surveyors Registration Council of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/S19.html" class = "lawURL"><p>Small and Medium Scale Enterprises Development Agency Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T1.html" class = "lawURL"><p>Tafawa Balawa Square Management Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T2.html" class = "lawURL"><p>Taxes and Levies (Approved List for Collection) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T3.html" class = "lawURL"><p>Teachers Registration Council of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T4.html" class = "lawURL"><p>Telecommunications and Postal Offences Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T5.html" class = "lawURL"><p>Territorial Waters Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T6.html" class = "lawURL"><p>Tobacco Smoking (Control) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T7.html" class = "lawURL"><p>Town Planners (Registration, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T8.html" class = "lawURL"><p>Trade Disputes Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T9.html" class = "lawURL"><p>Trade Disputes (Essential Services) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T10.html" class = "lawURL"><p>Trade (EEC Preferences under the Lome Convention) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T11.html" class = "lawURL"><p>Trade (Generalised System of Preferences) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T12.html" class = "lawURL"><p>Trade Malpractices (Miscellaneous Offences) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T13.html" class = "lawURL"><p>Trade Marks Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T14.html" class = "lawURL"><p>Trade Unions Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T15.html" class = "lawURL"><p>Trade Unions (International Affiliation) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T16.html" class = "lawURL"><p>Transfer of Convicted Offenders (Enactment and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T17.html" class = "lawURL"><p>Transferred Officers and Pensions Liability, etc., Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T18.html" class = "lawURL"><p>Treasury Bills Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T19.html" class = "lawURL"><p>Treasury Certificates Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T20.html" class = "lawURL"><p>Treaties (Making Procedure, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T21.html" class = "lawURL"><p>Tribunals of Inquiry Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T22.html" class = "lawURL"><p>Trustee Investments Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T23.html" class = "lawURL"><p>Trafficking in Persons (Prohibition) Law Enforcement and Administration Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T24.html" class = "lawURL"><p>Treaty on Mutual Legal Assistance in Criminal Matters between the Government of the
+							Federal Republic of Nigeria and the Government of the Republic of South Africa (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T25.html" class = "lawURL"><p>Treaty to Establish African Economic Community Relating to the Pan-African Parliament (Accession and Jurisdiction) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T26.html" class = "lawURL"><p>Treaty to Establish the African Union (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/T27.html" class = "lawURL"><p>Treaty between the Federal Republic of Nigeria and the Democratic Republic of Sao Tome and Principe on the Joint Development of Petroleum and Other Resources in Areas of the Exclusive Economic Zone of the two States (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U1.html" class = "lawURL"><p>University College Hospital Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U2.html" class = "lawURL"><p>University of Abuja Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U3.html" class = "lawURL"><p>University of Benin Teaching Hospital Management Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U4.html" class = "lawURL"><p>University of Benin (Transitional Provisions) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U5.html" class = "lawURL"><p>University of Calabar Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U6.html" class = "lawURL"><p>University of Ibadan Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U7.html" class = "lawURL"><p>University of Ilorin Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U8.html" class = "lawURL"><p>University of Jos Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U9.html" class = "lawURL"><p>University of Lagos Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U10.html" class = "lawURL"><p>University of Maiduguri Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U11.html" class = "lawURL"><p>University of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U12.html" class = "lawURL"><p>University of Nigeria Teaching Hospital Management Board Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U13.html" class = "lawURL"><p>University of Port Harcourt Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U14.html" class = "lawURL"><p>Usmanu Dan Fodio University, Sokoto Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U15.html" class = "lawURL"><p>University Teaching Hospitals (Reconstitution of Boards, etc.) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U16.html" class = "lawURL"><p>Urban Development Bank of Nigeria Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U17.html" class = "lawURL"><p>Utilities Charges Commission Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/U18.html" class = "lawURL"><p>United Nations Convention on Carriage of Goods by Sea (Ratification and Enforcement) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/V1.html" class = "lawURL"><p>Value Added Tax Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/V2.html" class = "lawURL"><p>Venture Capital (Incentives) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/V3.html" class = "lawURL"><p>Veterinary Surgeons Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/V4.html" class = "lawURL"><p>Visiting Forces Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/V5.html" class = "lawURL"><p>Voice of Nigeria Corporation Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/W1.html" class = "lawURL"><p>Wages Boards and Industrial Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/W2.html" class = "lawURL"><p>Water Resources Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/W3.html" class = "lawURL"><p>Weights and Measures Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/W4.html" class = "lawURL"><p>West African Examinations Council Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/W5.html" class = "lawURL"><p>Wireless Telegraphy Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/W7.html" class = "lawURL"><p>World Meteorological Organisation (Protection) Act</p></a>
+							<a href = "http://lawcompanion.net/laws2/CICSRN.html" class = "lawURL"><p>CHARTERED INSTITUE OF CERTIFIED SECRETARIES AND REPORTERS OF NIGERIA ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/CYBERCRIMES.html" class = "lawURL"><p>CYBERCRIMES (PROHIBITION, PREVENTION, ETC) ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/EA.html" class = "lawURL"><p>EVIDENCE ACT, 2011</p></a>
+							<a href = "http://lawcompanion.net/laws2/IM.html" class = "lawURL"><p>IMMIGRATION ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/TP.html" class = "lawURL"><p>TRAFFICKING IN PERSONS (PROHIBITION), (ENFORCEMENT AND ADMINISTRATION) ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/VAP.html" class = "lawURL"><p>VIOLENCE AGAINST PERSONS (PROHIBITION) ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/el.html" class = "lawURL"><p>EQUIPMENT AND LEASING ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/amcna.html" class = "lawURL"><p>ASSET MANAGEMENT CORPORATION OF NIGERIA ACT (Ammendment) 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/nemasa.html" class = "lawURL"><p>NIGERIAN ELECTRICITY MANAGEMENT SERVICES AUTHORITY (NEMASA) ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/ntc.html" class = "lawURL"><p>NATIONAL TOBACCO CONTROL ACT, 2015</p></a>
+							<a href = "http://lawcompanion.net/laws2/nbma.html" class = "lawURL"><p>NATIONAL BIOSAFETY MANAGEMENT AGENCY ACT, 2015</p></a>
+
+
+
+							<a href = "http://lawcompanion.net/laws2/2201.html" class = "lawURL"><p>NATIONAL ASSEMBLY SERVICE ACT,2014</p></a>
+                            <a href = "http://lawcompanion.net/laws2/2203.html" class = "lawURL"><p>NATIONAL HEALTH ACT, 2014</p></a>
+                            <a href = "http://lawcompanion.net/laws2/2204.html" class = "lawURL"><p>SAME SEX MARRIAGE (PROHIBITION) ACT, 2014</p></a>
+                            <a href = "http://lawcompanion.net/laws2/2205.html" class = "lawURL"><p>HIV AND AIDS (ANTI-DISCRIMINATION) ACT, 2014</p></a>
+                            <a href = "http://lawcompanion.net/laws2/2206.html" class = "lawURL"><p>NATIONAL AUTOMOTIVE DESIGN AND DEVELOPMENT COUNCIL ACT, 2014</p></a>
+                            <a href = "http://lawcompanion.net/laws2/nemasa.html" class = "lawURL"><p>INSTITUTE OF SAFETY PROFESSIONALS OF NIGERIA ACT, 2208</p></a>
+                            <a href = "http://lawcompanion.net/laws2/2157.html" class = "lawURL"><p>CRIMINAL PROCEDURE (NORTHERN STATES) ACT 2015</p></a>
+
+                            <a href = "http://lawcompanion.net/laws2/2210.html" class = "lawURL"><p>NATIONAL TOBACCO CONTROL ACT, 2015</p></a>
+                            <a href = "http://lawcompanion.net/laws2/nemasa.html" class = "lawURL"><p>ADMINISTRATION OF CRIMINAL JUSTICE ACT, 2015</p></a>
+                            <a href = "http://lawcompanion.net/laws2/1602.html" class = "lawURL"><p>CRMINAL PROCEDURE (NOTHERN STATES) ACT, 2015</p></a>
+                            <a href = "http://lawcompanion.net/laws2/2160.html" class = "lawURL"><p>VIOLENCE AGAINST PERSONS (PROHIBITION) ACT, 2015</p></a>
+
+                            <a href = "http://lawcompanion.net/laws2/3181.html" class = "lawURL"><p>EXTRADICTION (Amendment) ACT 2018</p></a>
+
+                            <a href = "http://lawcompanion.net/laws2/3182.html" class = "lawURL"><p>HYDROELECTRIC POWER PRODUCING AREAS DEVELOPMENT COMMISSION (ESTABLISHMENT, ETC) AMENDMENT ACT,2018</p></a>
+
+                            <a href = "http://lawcompanion.net/laws2/3183.html" class = "lawURL"><p> MUTUAL ASSISTANCE IN CRIMINAL MATTERS BILL, 2019</p></a>
+
+                            <a href = "http://lawcompanion.net/laws2/3184.html" class = "lawURL"><p> THE FEDERAL COMPETITION AND CONSUMER PROTECTION ACT, 2019</p></a>
+
+
+
+
+
+                        </div>
+
+						<div style="color: #FFF; background: none;">
+							<pre id = "lawsContent"></pre>
+						</div>
+					</div> <!-- end col-twelve -->
+				</div> <!-- end row -->
+			</div> <!-- end home-content-tablecell -->
+		</div> <!-- end home-content-table -->
+	</div>
+   </section>
+
+   <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+   <script src="js/custom.js"></script>
+	<script>
+		// if cookie is set
+		$(document).ready(function(e){
+			
+		});
+   </script>
+</body>
+
+</html>

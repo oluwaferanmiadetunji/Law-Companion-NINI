@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Law Companion Nini</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- fontawesome 5.0.4 js file -->
+    <script src="js/fontawesome-all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Cordova is loading.....
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Now the Cordova is ready
+
+        function onDeviceReady() {
+            document.addEventListener("offline", onOffline, false);
+            function onOffline() {
+                alert('No internet connection!');
+                document.location.href = "home.html";
+            }
+
+        }
+
+
+    </script>
+
+    <!-- favicons
+     ================================================== -->
+    <link rel="shortcut icon" href="assets/img/brand/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+
+<section id="home">
+
+    <div class="overlay"></div>
+    <div class="home-content-table">
+        <div class="home-content-tablecell">
+            <div class="row">
+                <div class="col-twelve" style = "margin-top: 25%;">
+                    <h5 style = "color: #FFF; font-size: 9pt;">Funmi Quadri &amp; Co.</h5>
+                    <div id = "admin" style="display: none;" >
+                        <a href="exam/admin/home.html"class = "button stroke form-control" >Law Companion Nini</a>
+                    </div>
+                     <div id = "user" style="display: none;">
+                      <a href="exam/user/dashboard.html" class = "button stroke form-control" >Take Exam</a>
+                    </div>
+                     <div>
+                      <a href="lc/home.html"  id = "login" class = "button stroke form-control" >&nbsp;E-library&nbsp;</a>
+                    </div>
+                </div> <!-- end col-twelve -->
+            </div> <!-- end row -->
+        </div> <!-- end home-content-tablecell -->
+    </div> <!-- end home-content-table -->
+
+    <ul class="home-social-list">
+        <li class="animate-intro">
+            <a href="tel:08131210744" target = "_blank"><i class="fas fa-phone"></i></a>
+        </li>
+        <li class="animate-intro">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://funmiquadrionline.com&quote=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li class="animate-intro">
+            <a href="https://twitter.com/intent/tweet?via=LawCompanionNG&text=Hi,%20I%20just%20downloaded%20law%20companion%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target = "_blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="animate-intro">
+            <a href="https://api.whatsapp.com/send?text=Hi,%20I%20just%20downloaded%20law%20companion%%20from%20https://play.google.com/store/apps/details?id=com.funmiquadrionline.elc" target ="_blank"><i class="fab fa-whatsapp"></i></a>
+        </li>
+    </ul> <!-- end home-social-list -->
+
+    <div class="scrolldown">
+        <a href="#" class="scroll-icon smoothscroll">
+            <img src = "images/logo.png" width = "115rem" />
+        </a>
+    </div>
+
+</section> <!-- end home -->
+
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+
+<!-- Java Script
+================================================== -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  $(document).ready(function(){
+    var name = localStorage.getItem('Name');
+    var email = localStorage.getItem('Email');
+    var count = localStorage.getItem('Count');
+    var duration = localStorage.getItem('Duration');
+    var phone = localStorage.getItem('Phone');
+    var address = localStorage.getItem('Address');
+    var x = localStorage.getItem('Role');
+    var role = x.toLowerCase();
+    if(role == 'user') {
+      document.getElementById('user').style.display = 'block'
+    } else if(role == 'admin') {
+      document.getElementById('admin').style.display = 'block'
+    }
+  })
+</script>
+</body>
+
+</html>

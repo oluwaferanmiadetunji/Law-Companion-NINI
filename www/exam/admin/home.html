@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CBT App Admin">
+    <meta name="author" content="Adeyemo Adeolu">
+
+    <!-- Title -->
+    <title>Law Companion Nini</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+
+    <!-- Favicon -->
+    <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+    <!-- Fonts -->
+
+    <!-- Icons -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+    <!--Bootstrap.min css-->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Dashboard CSS -->
+    <link href="../assets/css/dashboard.css" rel="stylesheet" type="text/css">
+
+    <!-- Tabs CSS -->
+    <link href="../assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom scroll bar css-->
+    <link href="../assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- Sidemenu Css -->
+    <link href="../assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+
+
+    <!--Select2 css-->
+    <link rel="stylesheet" href="../assets/plugins/select2/select2.css">    <style type="text/css">
+        td{
+            background: url(../assets/img/arrow_forward.png) no-repeat right center;
+        }
+        td a{color: #fff}
+    </style>
+    <script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+    <script>
+        // loading cordova
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady(){
+            document.addEventListener("offline", onOffline, false);
+            function onOffline() {
+                alert('No internet connection!');
+                document.location.href = "home.html";
+            }
+        }
+    </script>
+</head>
+
+<body class="app sidebar-mini">
+<div id="global-loader" ></div>
+<div class="page">
+    <div class="page-main">
+        <!-- Sidebar menu-->
+
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside class="app-sidebar" style="background-image: url(../assets/img/menu-bg.png);">
+    <div class="sidebar-img">
+        <a class="navbar-brand" href=""><span class="navbar-brand-img main-logo"><div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub></span><span class="navbar-brand-img logo"><sub><div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub></sub></span></a>
+        <ul class="side-menu ">
+            <li class="slide">
+                <a class="side-menu__item"  href="home.html"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Dashboard</span></a>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-underline"></i><span class="side-menu__label">Courses</span><i class="angle fa fa-angle-right"></i></a>
+                <ul class="slide-menu">
+                    <li>
+                        <a href="courses.html" class="slide-item">Available Courses</a>
+                    </li>
+                    <li>
+                        <a href="courses_add.html" class="slide-item">Add New Course</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-book-open"></i><span class="side-menu__label">Questions</span><i class="angle fa fa-angle-right"></i></a>
+                <ul class="slide-menu">
+                    <li>
+                        <a href="questions.html" class="slide-item">Available Questions</a>
+                    </li>
+                    <li>
+                        <a href="questions_add.html" class="slide-item">Add Question</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="slide">
+                <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-edit"></i><span class="side-menu__label">FeedBacks</span><i class="angle fa fa-angle-right"></i></a>
+                <ul class="slide-menu">
+                    <li>
+                        <a href="feedbacks.html" class="slide-item">See Feedbacks</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-users"></i><span class="side-menu__label">Manage Users</span><i class="angle fa fa-angle-right"></i></a>
+                <ul class="slide-menu">
+                    <li>
+                        <a class="slide-item" href="users.html">Registered Users</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item"  href="profile.html"><i class="side-menu__icon fa fa-user-alt"></i><span class="side-menu__label">Profile</span></a>
+            </li>
+            <li class="slide">
+                <a class="side-menu__item"  href="../../lc/home.html"><i class="side-menu__icon ni ni-user-run"></i><span class="side-menu__label">E-library</span></a>
+            </li>
+
+        </ul>
+
+    </div>
+</aside>        <!-- Sidebar menu-->
+
+        <!-- app-content-->
+        <div class="app-content ">
+            <div class="side-app">
+                <div class="main-content">
+                    <!-- Top Navigation -->
+                    <div class="modal fade" id="logoutModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Logout</h4>
+            </div>
+            <div class="modal-body">
+                <p>By clicking Logout, you will be logged out from this session, Click Cancel to discard?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="location.href='logout.html'" class="btn btn-primary" data-dismiss="modal" id="yes">Logout</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="no">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Notification</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this entry? Click Yes to continue or No to cancel process</p>
+                <input type="hidden" id="deleteId">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"  onclick="deleteItem()">Yes</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" >No</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+    <form class="check" method="POST">
+        <input type="text" name="device_id" id="device_id" value="">
+        <input type="submit" name="submit" id="submit" value="Check">
+    </form>
+</div>
+<!-- Top navbar -->
+<nav class="navbar navbar-top  navbar-expand-md navbar-dark" id="navbar-main">
+    <div class="container-fluid">
+        <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a>
+        <span class="d-none d-md-flex" id="name"></span>
+
+
+        <!-- Brand -->
+        <a class="navbar-brand pt-0 d-md-none" href="home.html">
+            <div class="signature-font">Funmi Quadri &amp; Co.</div>
+            <sub style="font-size: 12px">Law Companion Nini</sub>
+
+        </a>
+        <!-- User -->
+        <ul class="navbar-nav align-items-center ">
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link pr-md-0 mr-md-2 pl-1" data-toggle="dropdown" href="#" role="button">
+                    <div class="media align-items-center">
+                        <span class="avatar avatar-sm rounded-circle"><img alt="Image placeholder" src="../assets/img/user.png"></span>
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                    <div class=" dropdown-header noti-title text-center pb-3">
+                        <h3 class="text-capitalize text-dark mb-1" id="name1"></h3>
+                        <h6 class="text-overflow m-0">Admin</h6>
+                    </div>
+<!--                    <a class="dropdown-item" href="profile.php"><i class="ni ni-single-02"></i> <span>My profile</span></a>-->
+<!--                    <div class="dropdown-divider"></div><a class="dropdown-item" data-toggle='modal' data-target='#logoutModal'><i class="ni ni-user-run"></i> <span>Logout</span></a>-->
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<!-- Page content -->
+
+<div class="container-fluid pt-8">
+    <div class="page-header mt-0  p-3">
+        <h3 class="mb-sm-0">Dashboard</h3>
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#"><i class="fe fe-home"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </div>
+    <div class="row finance-content">
+        <div class="col-md-3">
+            <div class="card shadow text-center">
+                <div class="card-body">
+                    <h3 class="mb-3">Available Course(s)</h3>
+                    <div class="chart-circle" data-value="1" data-thickness="10" data-color="#00d9bf"><canvas width="128" height="128"></canvas>
+                        <div class="chart-circle-value">
+                            <a href="courses.html"><div class="text-xxl" id="av_courses"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow text-center">
+                <div class="card-body">
+                    <h3 class="mb-3">Available Question(s)</h3>
+                    <div class="chart-circle" data-value="1" data-thickness="10" data-color="#fc0"><canvas width="128" height="128"></canvas>
+                        <div class="chart-circle-value">
+                            <a href="questions.html"><div class="text-xxl" id="av_questions"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow text-center">
+                <div class="card-body">
+                    <h3 class="mb-3">Total Feedback</h3>
+                    <div class="chart-circle" data-value="1" data-thickness="10" data-color="#0A7C9B"><canvas width="128" height="128"></canvas>
+                        <div class="chart-circle-value">
+                            <a href="feedbacks.html"><div class="text-xxl" id="total_feedbacks"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow text-center">
+                <div class="card-body">
+                    <h3 class="mb-3">Registered Users</h3>
+                    <div class="chart-circle" data-value="1" data-thickness="10" data-color="#ad59ff"><canvas width="128" height="128"></canvas>
+                        <div class="chart-circle-value">
+                            <a href="users.html"><div class="text-xxl" id="registered_users"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <!-- app-content-->
+    </div>
+</div> <!--Back to top -->
+<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+<!-- Adon Scripts -->
+<!-- Core -->
+<script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+<script src="../assets/js/popper.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/chart-circle/circle-progress.min.js"></script>
+
+<!-- Optional JS -->
+<script src="../assets/plugins/chart.js/dist/Chart.min.js"></script>
+<script src="../assets/plugins/chart.js/dist/Chart.extension.js"></script>
+
+<!-- Fullside-menu Js-->
+<script src="../assets/plugins/toggle-sidebar/js/sidemenu.js"></script>
+
+<!-- Custom scroll bar Js-->
+<script src="../assets/plugins/customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- peitychart -->
+<script src="../assets/plugins/peitychart/jquery.peity.min.js"></script>
+<script src="../assets/plugins/peitychart/peitychart.init.js"></script>
+
+<!-- Adon JS -->
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/dashboard-service.js"></script></body>
+
+<!-- Top navbar-->
+
+
+<script type="text/javascript">
+    $(document).ready(function(e){
+        var name = localStorage.getItem("Name");
+        var email = localStorage.getItem("Email");
+        document.getElementById('name').innerHTML = name;
+        document.getElementById('name1').innerHTML = name;
+
+        // fetch number of available courses
+		var url_number_of_courses = 'https://lawcompanioncbt.website/lccbt/public/api/courses/details';
+		$.ajax({
+            url: url_number_of_courses,
+            success: function(result){
+    			var number_of_courses = String(result.data);
+    			document.getElementById('av_courses').innerHTML = number_of_courses;
+    		}
+        });
+
+        // fetch number of available questions
+        var url_number_of_questions = 'https://lawcompanioncbt.website/lccbt/public/api/questions/details';
+		$.ajax({
+            url: url_number_of_questions,
+            success: function(result){
+    			var number_of_questions = String(result.data);
+    			document.getElementById('av_questions').innerHTML = number_of_questions;
+    		}
+        });
+
+        // fetch number of available feedbacks
+        var url_number_of_feedbacks = 'https://lawcompanioncbt.website/lccbt/public/api/feedbacks/details';
+		$.ajax({
+            url: url_number_of_feedbacks,
+            success: function(result){
+    			var number_of_feedbacks = String(result.data);
+    			document.getElementById('total_feedbacks').innerHTML = number_of_feedbacks;
+    		}
+        });
+
+
+        // fetch number of registered users
+        var url_number_of_registered_users = 'https://lawcompanioncbt.website/lccbt/public/api/user/all';
+		$.ajax({
+            url: url_number_of_registered_users,
+            success: function(result){
+    			var number_of_registered_users = String(result.data);
+    			document.getElementById('registered_users').innerHTML = number_of_registered_users;
+    		}
+        });
+
+    });
+</script>
+</html>
